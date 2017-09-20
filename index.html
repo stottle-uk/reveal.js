@@ -32,8 +32,8 @@
 				<p><small>Stuart Tottle</small></p>
 				<aside class="notes">
 					<p>
-						There is not a single implementation of scrum and it's all down to interpretation and experiences. How should a project prepare
-						for scrum and what needs be defined and universally understood for successful teams.
+						There is not a single implementation of scrum and it's all down to interpretation, experiences and what works for the business.
+						How should a project prepare for scrum and what needs be defined and universally understood for successful teams.
 					</p>
 					<p>
 						I'm 17 years in IT have worked in support, infrastructure, projects and development. I'm passionate about code, but i also
@@ -198,13 +198,7 @@
 					<p>The goal</p>
 				</section>
 				<section>
-					<p>Pairing/Mobbing</p>
-				</section>
-				<section>
 					<p>Analysis</p>
-				</section>
-				<section>
-					<p>Reporting</p>
 				</section>
 			</section>
 
@@ -230,10 +224,20 @@
 					<aside class="notes">
 						<ul>
 							<li>BA is working on these all the time to ensure they are in a good place for refinement</li>
+							<li>Persona</li>
 							<li>Bugs</li>
 							<li>Spikes</li>
 							<li>Acceptance criteria</li>
 							<li>Definition of Done</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<p>Pairing/Mobbing</p>
+					<aside class="notes">
+						<ul>
+							<li>Training for new members and juniors</li>
+							<li>Instant code reviews</li>
 						</ul>
 					</aside>
 				</section>
@@ -265,19 +269,22 @@
 			<section>
 				<h3>Conclusion</h3>
 				<aside class="notes">
-					Scrum is a useful tool, but is not the silver bullet, buy in and understanding is so important as it empowers the team own the product and the process
-				</aside> 
+					Scrum is a useful tool, but is not the silver bullet, buy in and understanding is so important as it empowers the team own
+					the product and the process. There are many more points that i have not covered, but i hope this has been food for thought
+					as our overall goal is to create working software
+				</aside>
 			</section>
 
 			<section>
 				<h3>Questions</h3>
 				<ul style="color: #999; font-size:50%">
+					<li>Reporting</li>
 					<li>Capacity</li>
 					<li>Sprint Length</li>
 					<li>Sizing/Story points</li>
 					<li>Acceptance Criteria Format</li>
 					<li>User story states</li>
-					<li>Tasks</li>
+					<li>User story tasks</li>
 					<li>Prioritisation/Importance</li>
 					<li>Source control</li>
 					<li>Releases</li>
@@ -285,6 +292,8 @@
 					<li>TDD/BDD</li>
 					<li>Coding standings/Linting</li>
 					<li>Alerts/Logging</li>
+					<li>Tech in meetings</li>
+					<li>Non-functional stories/Enablers</li>
 				</ul>
 			</section>
 
@@ -316,6 +325,15 @@
 				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
 			]
 		});
+
+		window.addEventListener("mousedown", handleClick, false);
+		window.addEventListener("contextmenu", function (e) { e.preventDefault(); }, false);
+
+		function handleClick(e) {
+			e.preventDefault();
+			if (e.button === 0) Reveal.next();
+			if (e.button === 2) Reveal.prev();
+		}
 	</script>
 </body>
 
